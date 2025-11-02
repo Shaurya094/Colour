@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 image = cv2.imread('example.jpg')
 
-brightness_matric = np.ones(image.shape, dtype="uint8") * 50
+x = int(input("enter brightness:\n"))
+brightness_matric = np.ones(image.shape, dtype="uint8") * x
 brighter = cv2.add(image, brightness_matric)
 bright = cv2.cvtColor(brighter, cv2.COLOR_BGR2RGB)
 plt.imshow(bright)
